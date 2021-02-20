@@ -1,15 +1,16 @@
 const fs = require('fs');
 const path = require('path');
 const express = require('express');
-const notesArray = require('./data/db.json');
+const { v4: uuidv4 } = require('uuid');
+const notesArray = require('./Develop/data/db.json');
 
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3004;
 const app = express();
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-// app.use(express.static(__dirname + '/public'));
-app.use(express.static('public'));
+app.use(express.static(__dirname + '/Develop'));
+//app.use(express.static('Develop'));
 
 
 function findById(id, notesLocalArray) {
@@ -30,7 +31,7 @@ function createNewNote(body, notesLoalArray) {
 }
 function writeToFile(notesLoalArray){
     fs.writeFileSync(
-        path.join(__dirname, './data/db.json'),
+        path.join(__dirname, './Develop/data/db.json'),
         JSON.stringify({ notes : notesLoalArray} , null, 2)
       );
 }
@@ -70,7 +71,7 @@ app.get("/api/notes",(req,res) => {
 });
 
 app.post("/api/notes",(req,res) => {
-    req.body.id = notesArray.length.toString();
+    req.body.id = uuidv4().toString();
 
     if(!validateInputParam(req.body)){
         res.status(400).send('The note is not properly formated ');
@@ -83,13 +84,14 @@ app.post("/api/notes",(req,res) => {
 
 
 app.get("/notes",(req,res) => {
-    res.sendFile(path.join(__dirname, './public/notes.html'));
+    console.log(__dirname);
+    res.sendFile(path.join(__dirname, './Develop/notes.html'));
 });
 app.get("*",(req,res) => {
-    res.sendFile(path.join(__dirname, './public/index.html'));
+    res.sendFile(path.join(__dirname, './Develop/index.html'));
 });
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, './public/index.html'));
+    res.sendFile(path.join(__dirname, './Develop/index.html'));
   });
 
 
