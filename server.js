@@ -32,7 +32,7 @@ function createNewNote(body, notesLoalArray) {
 function writeToFile(notesLoalArray){
     fs.writeFileSync(
         path.join(__dirname, './Develop/data/db.json'),
-        JSON.stringify({ notes : notesLoalArray} , null, 2)
+        JSON.stringify(notesLoalArray, null, 2)
       );
 }
 function validateInputParam(note) {

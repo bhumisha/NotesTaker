@@ -1,24 +1,7 @@
-{
-  "notes": [
-    {
-      "id": "0",
-      "title": "Test Title",
-      "text": "Test text"
-    },
-    {
-      "title": "test1",
-      "text": "test1",
-      "id": "1"
-    },
-    {
-      "title": "Test2",
-      "text": "rw23",
-      "id": "2"
-    },
-    {
-      "title": "Note23423",
-      "text": "adsasd",
-      "id": "07cac7b9-e939-4c0d-9a33-26a41c4f3ed2"
-    }
-  ]
-}
+[
+  {
+    "id": "0",
+    "title": "Test Title",
+    "text": "Test text"
+  }
+]
