@@ -3,5 +3,10 @@
     "id": "0",
     "title": "Test Title",
     "text": "Test text"
+  },
+  {
+    "title": "New Note",
+    "text": "New note after HTML Route",
+    "id": "0e0108c8-a8ce-4405-b35d-21e1e268fc7a"
   }
 ]

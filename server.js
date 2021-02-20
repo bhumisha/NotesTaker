@@ -3,6 +3,9 @@ const path = require('path');
 const express = require('express');
 const { v4: uuidv4 } = require('uuid');
 const notesArray = require('./Develop/data/db.json');
+const htmlRoutes = require('./Develop/routes/htmlRoutes');
+
+
 
 const PORT = process.env.PORT || 3004;
 const app = express();
@@ -83,17 +86,7 @@ app.post("/api/notes",(req,res) => {
 });
 
 
-app.get("/notes",(req,res) => {
-    console.log(__dirname);
-    res.sendFile(path.join(__dirname, './Develop/notes.html'));
-});
-app.get("*",(req,res) => {
-    res.sendFile(path.join(__dirname, './Develop/index.html'));
-});
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, './Develop/index.html'));
-  });
-
+app.use('/', htmlRoutes);
 
 
 app.listen(PORT,() => {
