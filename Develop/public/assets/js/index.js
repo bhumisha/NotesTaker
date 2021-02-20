@@ -57,8 +57,10 @@ const renderActiveNote = () => {
     noteTitle.setAttribute('readonly', true);
     noteText.setAttribute('readonly', true);
     noteTitle.value = activeNote.title;
-    noteText.value = activeNote.title;
+    noteText.text = activeNote.title;
   } else {
+    noteTitle.removeAttribute('readonly');
+    noteText.removeAttribute('readonly');
     noteTitle.value = '';
     noteText.value = '';
   }
@@ -116,6 +118,7 @@ const handleRenderSaveBtn = () => {
 
 // Render the list of note titles
 const renderNoteList = async (notes) => {
+  debugger;
   let jsonNotes = await notes.json();
   if (window.location.pathname === '/notes') {
     noteList.forEach((el) => (el.innerHTML = ''));
@@ -169,6 +172,8 @@ const renderNoteList = async (notes) => {
 
 // Gets notes from the db and renders them to the sidebar
 const getAndRenderNotes = () => getNotes().then(renderNoteList);
+
+
 
 if (window.location.pathname === '/notes') {
   saveNoteBtn.addEventListener('click', handleNoteSave);
