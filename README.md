@@ -28,7 +28,7 @@ https://github.com/bhumisha/Team-Profile-Generator
 https://dashboard.heroku.com/apps/notes-taker-feb21
 
 **Heroku** - Project has been build and deployed in heroku platform.
-https://notes-taker-feb21.herokuapp.com/
+https://notes-taker-feb21.herokuapp.com
 
 ## Images 
 
