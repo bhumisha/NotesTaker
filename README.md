@@ -21,13 +21,17 @@ npm install
 For clone the project use below options or you can download Zip file.
 
 SSH  - "git@github.com:bhumisha/NotesTaker.git"
+
 HTTPS - "https://github.com/bhumisha/NotesTaker.git"
 
 Project Source code :
+
 https://github.com/bhumisha/Team-Profile-Generator
+
 https://dashboard.heroku.com/apps/notes-taker-feb21
 
 **Heroku** - Project has been build and deployed in heroku platform.
+
 https://notes-taker-feb21.herokuapp.com
 
 ## Images 
