@@ -1,8 +1,10 @@
-const path = require('path');
 const express = require('express');
+//Db File for notes array
 
-const notesArray = require('./Develop/data/db.json');
+//HTML Routes is for path that join to Html pages.
 const htmlRoutes = require('./Develop/routes/htmlRoutes');
+
+//Api Routes is for all routes
 const apiRoutes = require('./Develop/routes/apiRoutes');
 
 const PORT = process.env.PORT || 3001;
@@ -20,5 +22,4 @@ app.use('/', htmlRoutes);
 
 app.listen(PORT,() => {
     console.log(`API server now on port ${PORT}!`);
-    JSON.stringify(notesArray);
 });

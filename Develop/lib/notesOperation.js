@@ -19,7 +19,7 @@ function createNewNote(body, notesLoalArray) {
 }
 function writeToFile(notesLoalArray){
     fs.writeFileSync(
-        path.join(__dirname, './Develop/data/db.json'),
+        path.join(__dirname, '../data/db.json'),
         JSON.stringify(notesLoalArray, null, 2)
       );
 }
