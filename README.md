@@ -44,7 +44,7 @@ The following screen demonstrates the application functionality
 
 **Notes**
 
-![](Develop/assets/images/NotePage.png)
+![](Develop/assets/images/NotesPage.png)
 
 ## Questions
 
