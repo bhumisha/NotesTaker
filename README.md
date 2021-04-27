@@ -26,7 +26,7 @@ HTTPS - "https://github.com/bhumisha/NotesTaker.git"
 
 Project Source code :
 
-https://github.com/bhumisha/Team-Profile-Generator
+https://github.com/bhumisha/NotesTaker
 
 https://dashboard.heroku.com/apps/notes-taker-feb21
 
